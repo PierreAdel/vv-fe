@@ -13,7 +13,7 @@ function Home() {
       <StickyNavbar setOpen={setOpen} />
       {open && (
         <Suspense fallback={<div>Loading...</div>}>
-          <div className="container mx-auto px-4 pt-20">
+          <div className="container mx-auto px-4 pt-20 text-center">
             <NotificationCards />
           </div>
         </Suspense>

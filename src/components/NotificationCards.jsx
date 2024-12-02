@@ -31,7 +31,7 @@ function NotificationCards() {
 
   return (
     <Suspense fallback={<div>Loading notifications...</div>}>
-      <div className="flex flex-col">
+      <div className="flex flex-col text-left">
         {cards.map((card) => (
           <NotificationCard
             key={card._id}
