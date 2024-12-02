@@ -47,7 +47,7 @@ function NotificationCards() {
           <button
             disabled={isFetchingNextPage}
             className={`mx-auto my-6 w-fit rounded-md border border-blue-400 px-12 py-3 outline-none ${isFetchingNextPage ? "cursor-not-allowed" : "hover:bg-blue-400 hover:text-white"}`}
-            onClick={fetchNextPage()}
+            onClick={fetchNextPage}
           >
             {isFetchingNextPage ? "Loading..." : "Load More"}
           </button>
