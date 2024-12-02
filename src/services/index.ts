@@ -1,1 +1,1 @@
-export { default as usersService } from "./users.service";
+export { default as notificationsService } from "./notifications.service";

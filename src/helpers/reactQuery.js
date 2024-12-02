@@ -90,6 +90,7 @@ const useCustomInfiniteQuery = (
   useInfiniteQuery({
     queryKey: [queryKey, objectUtils.cleanEmpty(options)],
     queryFn: async ({ pageParam = 1 }) => {
+      console.log("pageParam", pageParam);
       const res = await getApi({ page: pageParam, ...options });
       res.page = pageParam;
       return res;
