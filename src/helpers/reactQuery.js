@@ -90,15 +90,14 @@ const useCustomInfiniteQuery = (
   useInfiniteQuery({
     queryKey: [queryKey, objectUtils.cleanEmpty(options)],
     queryFn: async ({ pageParam = 1 }) => {
-      console.log("pageParam", pageParam);
       const res = await getApi({ page: pageParam, ...options });
       res.page = pageParam;
       return res;
     },
     enabled,
     ...(initialData && { initialData }),
-    getNextPageParam: (_, pages, lastPage) => {
-      if (lastPage < pages) return lastPage + 1;
+    getNextPageParam: (params) => {
+      if (params.page < params.pages) return params.page + 1;
       return undefined;
     },
   });
