@@ -1,7 +1,6 @@
 import reactQuery from "../helpers/reactQuery";
 import { FormProvider, useForm } from "react-hook-form";
 import todoService from "../services/todo.service";
-import { Button, Container, Input, Stack, Typography } from "@mui/material";
 import "./Home.css";
 
 function AddTodoForm() {
@@ -28,21 +27,24 @@ function AddTodoForm() {
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)}>
-        <Stack direction="column" gap={2}>
-          <Input
-            sx={{ width: "50%" }}
+        <div className="gap-2 flex flex-col">
+          <input
+            className="border border-black rounded-lg py-2 px-2"
             placeholder="Todo Title"
             {...methods.register("title", { required: true })}
           />
-          <Input
-            sx={{ width: "75%" }}
+          <input
+            className="border border-black rounded-lg py-2 px-2"
             placeholder="Todo Text"
             {...methods.register("text", { required: true })}
           />
-        </Stack>
-        <Button sx={{ mt: "2rem" }} variant="outlined" type="submit">
+        </div>
+        <button
+          className="mt-2 border border-black rounded-lg py-2 px-10 text-lg text-blue-500"
+          type="submit"
+        >
           Submit
-        </Button>
+        </button>
       </form>
     </FormProvider>
   );
@@ -58,7 +60,7 @@ function Home() {
   );
 
   return (
-    <Container sx={{ mt: 10 }} maxWidth="lg">
+    <div className="px-72 mt-4 container">
       <ul>
         {data?.documents?.length > 0 &&
           data?.documents?.map((todo) => (
@@ -70,9 +72,9 @@ function Home() {
             </li>
           ))}
       </ul>
-      <Typography variant="h5">Add a Todo</Typography>
+      <h1>Add a Todo</h1>
       <AddTodoForm />
-    </Container>
+    </div>
   );
 }
 
