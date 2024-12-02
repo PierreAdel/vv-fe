@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 https://www.loom.com/share/e04c7e9de0cb4088b56d151eab1b76c0
 
 ## Preview screenshots
+![image](https://github.com/user-attachments/assets/f27488d6-4700-4aaa-b086-b7ba41d26b1b)
+![image](https://github.com/user-attachments/assets/dfa593cf-2639-4508-a42d-2a63107ae910)
 
 ## Available Scripts
 
